@@ -21,13 +21,7 @@ export const Experience = () => {
 
             {/* Kontrol Mouse seperti blender */}
             {/* INI Pengecekan apabila device atau Web nya support atau tidak */}
-            {WebGL.isWebGLAvailable() ?
-                <OrbitControls enableZoom={false} />
-                // null
-                :
-                null
-
-            }
+            {/* {WebGL.isWebGLAvailable() ? <OrbitControls enableZoom={false} /> : null} */}
 
 
 
