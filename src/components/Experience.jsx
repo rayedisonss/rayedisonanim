@@ -1,9 +1,10 @@
 import { OrbitControls, ScrollControls } from "@react-three/drei";
-import { Office } from "./Office";
 import { Overlay } from "./Overlay";
 import { TigaSepatu } from "./TigaSepatu";
-import { Card } from "./CardsShoes/Card";
+
 import WebGL from 'three/addons/capabilities/WebGL.js';
+import { ThreeShoes } from "./3DModels/ThreeShoes";
+
 
 
 export const Experience = () => {
@@ -14,7 +15,7 @@ export const Experience = () => {
 
             {/* Cahaya */}
 
-            <ambientLight intensity={2} />
+            <ambientLight intensity={5} />
 
 
 
@@ -37,7 +38,9 @@ export const Experience = () => {
 
                 {/* Assets 3D */}
 
-                <TigaSepatu />
+
+                <ThreeShoes />
+                {/* <TigaSepatu /> */}
                 {/* <Office /> */}
 
             </ScrollControls>

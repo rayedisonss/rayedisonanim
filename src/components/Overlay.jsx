@@ -9,7 +9,7 @@ const Section = (props) => {
             }`}>
             <div className="w-1/2 flex items-center justify-center">
                 <div className="max-w-sm w-full">
-                    <div className="bg-white  rounded-lg px-8 py-12">
+                    <div className="bg-secondary text-white  rounded-lg px-8 py-12">
                         {props.children}
                     </div>
                 </div>
@@ -20,30 +20,29 @@ const Section = (props) => {
 
 export const Overlay = () => {
 
-    // const scroll = useScroll()
-    // const [opacityFirstSection, setOpacityFirstSection] = useState(1);
-    // const [opacitySecondSection, setOpacitySecondSection] = useState(1);
-    // const [opacityLastSection, setOpacityLastSection] = useState(1);
+    const scroll = useScroll()
+    const [opacityFirstSection, setOpacityFirstSection] = useState(1);
+    const [opacitySecondSection, setOpacitySecondSection] = useState(1);
+    const [opacityLastSection, setOpacityLastSection] = useState(1);
 
 
-    // useFrame(() => {
-    //     setOpacityFirstSection(1 - scroll.range(0, 1 / 3));
-    //     setOpacitySecondSection(scroll.curve(1 / 3, 1 / 3));
-    //     setOpacityLastSection(scroll.range(2 / 3, 1 / 3));
-    // })
+    useFrame(() => {
+        setOpacityFirstSection(1 - scroll.range(0, 1 / 3));
+        setOpacitySecondSection(scroll.curve(1 / 3, 1 / 3));
+        setOpacityLastSection(scroll.range(2 / 3, 1 / 3));
+    })
 
 
 
 
     return (
         <Scroll html>
-            <Navbar />
+
             <div class="w-screen">
                 <Section>
                     <h1 className="font-semibold font-serif text-2xl">
                         Hello, I'm Wawa Sensei
                     </h1>
-                    <p className="text-gray-500">Welcome to my beautiful portfolio</p>
                     <p className="mt-3">I know:</p>
                     <ul className="leading-9">
                         <li>🧑‍💻 How to code</li>
@@ -56,7 +55,6 @@ export const Overlay = () => {
                     <h1 className="font-semibold font-serif text-2xl">
                         Here are my skillsets 🔥
                     </h1>
-                    <p className="text-gray-500">PS: I never test</p>
                     <p className="mt-3">
                         <b>Frontend 🚀</b>
                     </p>
@@ -81,10 +79,7 @@ export const Overlay = () => {
                     <h1 className="font-semibold font-serif text-2xl">
                         🤙 Call me maybe?
                     </h1>
-                    <p className="text-gray-500">
-                        I'm very expensive but you won't regret it
-                    </p>
-                    <p className="mt-6 p-3 bg-slate-200 rounded-lg">
+                    <p className="mt-6 p-3 bg-primary rounded-lg">
                         📞 <a href="tel:(+42) 4242-4242-424242">(+42) 4242-4242-424242</a>
                     </p>
                 </Section>

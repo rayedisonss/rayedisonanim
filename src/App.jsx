@@ -1,25 +1,20 @@
 import './App.css'
-import { Canvas } from '@react-three/fiber'
-import { Experience } from './components/Experience'
-import { CardGroup } from './components/CardsShoes/CardGroup'
-import { Header } from './components/Header'
-import { Carousel } from './components/Carousel/Carousel'
-import { Navbar } from './components/Navbar'
 
+import { BrowserRouter as Router, Routes, Route } from 'react-router-dom'
+import { Shops } from './pages/Shops'
+import { Home } from './pages/Home'
 function App() {
   return (
     <>
-      <Canvas camera={{
-        fov: 64,
-        position: [2.3, 1.5, 2.3]
-      }}>
-        <Experience />
-      </Canvas>
-      <Header title={"Trending"} />
-      <CardGroup />
+      <Router>
+        <Routes>
+          <Route path='/' element={<Home />} />
+          <Route path='/shops' element={<Shops />} />
 
-      <Header title={"Some Product"} />
-      <Carousel />
+        </Routes>
+      </Router>
+
+
 
       {/* </div> */}
 
