@@ -6,6 +6,7 @@ import { CardGroup } from '../components/CardsShoes/CardGroup'
 import { CarouselProduct } from '../components/Carousel/CarouselProduct'
 import { Footer } from '../components/Footer'
 import { Navbar } from '../components/Navbar'
+import { CarouselNews } from '../components/Carousel/CarouselNews'
 
 export const Home = () => {
     return (
@@ -26,6 +27,11 @@ export const Home = () => {
 
             <Header title={"Some Product"} />
             <CarouselProduct />
+
+            <Header title={"Lihat Semua"} />
+            <div className="container mx-auto flex justify-center">
+                <button className="btn btn-primary" onClick={() => navigate('/product')}>More</button>
+            </div>
 
             <Footer />
 

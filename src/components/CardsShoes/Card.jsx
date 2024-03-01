@@ -11,7 +11,7 @@ export const Card = ({ name, description, nameImage }) => {
                     <h2 className="card-title">{name}</h2>
                     <p>{description}</p>
                     <div className="card-actions">
-                        <button className="btn btn-primary text-black">Show More</button>
+                        <button className="btn btn-primary text-black">Selengkapnya</button>
                     </div>
                 </div>
             </div>
