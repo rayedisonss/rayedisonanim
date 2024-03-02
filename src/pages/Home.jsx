@@ -21,9 +21,6 @@ export const Home = () => {
                 <Experience />
             </Canvas>
 
-
-
-
             <Header title={"Trending"} />
             <CardGroup />
 

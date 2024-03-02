@@ -46,9 +46,5 @@ export const CarouselNews = () => {
             </Splide>
         </>
 
-
-
-
-
     )
 }

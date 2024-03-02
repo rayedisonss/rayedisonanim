@@ -29,7 +29,7 @@ export const CardPrice = () => {
                 <div className='flex gap-2 justify-center'>
                     <button className="btn btn-primary" onClick={decrease}>-</button>
                     <span className="p-3 ">{counter}</span>
-                    {/* <span className="p-3 ">{counter}</span> */}
+
                     <button className="btn btn-primary" onClick={increase}>+</button>
                 </div>
 
@@ -52,7 +52,6 @@ export const CardPrice = () => {
                     <li>
                         <a><Chat size={15} />Inbox</a>
                     </li>
-                    <div className="divider"></div>
                     <li>
                         <a><Heart size={15} />Wishlist</a>
                     </li>

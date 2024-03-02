@@ -1,7 +1,5 @@
-import { Scroll, useScroll } from '@react-three/drei'
-import React, { useState } from 'react'
-import { Navbar } from './Navbar';
-import { useFrame } from '@react-three/fiber';
+import { Scroll } from '@react-three/drei'
+import React from 'react'
 
 const Section = (props) => {
     return (
@@ -20,19 +18,6 @@ const Section = (props) => {
 
 export const Overlay = () => {
 
-    const scroll = useScroll()
-    const [opacityFirstSection, setOpacityFirstSection] = useState(1);
-    const [opacitySecondSection, setOpacitySecondSection] = useState(1);
-    const [opacityLastSection, setOpacityLastSection] = useState(1);
-
-
-    useFrame(() => {
-        setOpacityFirstSection(1 - scroll.range(0, 1 / 3));
-        setOpacitySecondSection(scroll.curve(1 / 3, 1 / 3));
-        setOpacityLastSection(scroll.range(2 / 3, 1 / 3));
-    })
-
-
 
 
     return (
@@ -48,14 +33,14 @@ export const Overlay = () => {
                 </Section>
                 <Section right >
                     <h1 className="font-semibold font-serif sm:text-2xl text-sm text-center">
-                        Lebih dari Sekadar Alas Kaki
+                        Sepatu yang mencerminkan kepribadian dan gayamu yang unik?
                     </h1>
 
                     <p className="animate-bounce text-center mt-6">↓</p>
                 </Section>
                 <Section>
                     <h1 className="font-semibold font-serif sm:text-2xl text-sm text-center">
-                        🤙 Tunggu apa lagi? Belilah di <br />
+                        🤙 Semuanya ada di <br />
 
                     </h1>
                     <p className="mt-6 p-3 bg-primary rounded-lg text-center">

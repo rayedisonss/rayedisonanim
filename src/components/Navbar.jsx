@@ -42,7 +42,7 @@ export const Navbar = ({ top }) => {
                                 </div>
                                 <ul tabIndex={0} className="mt-3 z-[1] p-2 shadow menu menu-sm dropdown-content bg-base-100 rounded-box w-52">
                                     <li><a onClick={() => { navigate('/profile') }}>Profile</a></li>
-                                    <li><a onClick={() => { navigate('/cart') }}>Keranjang</a></li>
+                                    <li><a onClick={() => { navigate('/cart') }}>Keranjang <div className="badge badge-secondary">4 Barang</div></a></li>
                                     <li><a>Keluar</a></li>
                                 </ul>
                             </div>
@@ -60,36 +60,3 @@ export const Navbar = ({ top }) => {
 
 
 
-
-
-// <nav class="bg-gray-800 sticky top-0">
-//     <div class="mx-auto max-w-7xl px-2 sm:px-6 lg:px-8  justify-center items-center">
-//         <div class="relative flex h-16 items-center justify-between">
-
-//             <div class="flex flex-1 items-center justify-start sm:items-stretch ">
-//                 <div class="flex flex-shrink-0 items-center sm:text-left text-center">
-//                     <a href="#" className='bg-gray-900 text-white rounded-md px-3 py-2 text-sm font-medium'> RayShop</a>
-//                 </div>
-//                 <div class=" sm:ml-6 sm:block hidden">
-//                     <div class="flex space-x-4 ">
-//                         <a href="#" class="text-gray-300 hover:bg-gray-700 hover:text-white rounded-md px-3 py-2 text-sm font-medium">Desktop</a>
-//                         <a href="#" class="text-gray-300 hover:bg-gray-700 hover:text-white rounded-md px-3 py-2 text-sm font-medium">Product</a>
-//                         <a href="#" class="text-gray-300 hover:bg-gray-700 hover:text-white rounded-md px-3 py-2 text-sm font-medium">Contact</a>
-
-//                     </div>
-//                 </div>
-//             </div>
-
-//         </div>
-//     </div>
-
-//     {/* <!-- Mobile menu, show/hide based on menu state. --> */}
-//     <div class="sm:hidden text-center" id="mobile-menu">
-//         <div class="space-y-1 px-2 pb-3">
-
-//             <a href="#" class="text-gray-300 hover:bg-gray-700 hover:text-white block rounded-md px-3 py-2 text-base font-medium">Mobile</a>
-//             <a href="#" class="text-gray-300 hover:bg-gray-700 hover:text-white block rounded-md px-3 py-2 text-base font-medium">Product</a>
-//             <a href="#" class="text-gray-300 hover:bg-gray-700 hover:text-white block rounded-md px-3 py-2 text-base font-medium">Contact</a>
-//         </div>
-//     </div>
-// </nav>

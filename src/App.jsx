@@ -1,5 +1,4 @@
 import './App.css'
-
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom'
 import { Home } from './pages/Home'
 import { AllProducts } from './pages/AllProducts'
@@ -24,14 +23,8 @@ function App() {
           <Route path='/profile' element={<Profile />} />
           <Route path='/cart' element={<Cart />} />
           <Route path='*' element={<NotFound />} />
-
         </Routes>
       </Router>
-
-
-
-      {/* </div> */}
-
     </>
 
   )
