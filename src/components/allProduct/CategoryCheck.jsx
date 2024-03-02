@@ -14,7 +14,7 @@ export const CategoryCheck = () => {
                     <input type="checkbox" className="checkbox checkbox-primary" />
                 </label>
                 <label className="label cursor-pointer">
-                    <span className="label-text">Remember me</span>
+                    <span className="label-text">Lari</span>
                     <input type="checkbox" className="checkbox checkbox-primary" />
                 </label>
             </div>
