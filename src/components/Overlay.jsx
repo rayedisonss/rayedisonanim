@@ -40,47 +40,26 @@ export const Overlay = () => {
 
             <div class="w-screen">
                 <Section>
-                    <h1 className="font-semibold font-serif text-2xl">
-                        Hello, I'm Wawa Sensei
+                    <h1 className="font-semibold font-serif sm:text-2xl text-sm text-center">
+                        Butuh Sepatu yang Nyaman dengan Gaya Memukau?
                     </h1>
-                    <p className="mt-3">I know:</p>
-                    <ul className="leading-9">
-                        <li>🧑‍💻 How to code</li>
-                        <li>🧑‍🏫 How to learn</li>
-                        <li>📦 How to deliver</li>
-                    </ul>
-                    <p className="animate-bounce  mt-6">↓</p>
+
+                    <p className="animate-bounce  mt-6 text-center">↓</p>
                 </Section>
                 <Section right >
-                    <h1 className="font-semibold font-serif text-2xl">
-                        Here are my skillsets 🔥
+                    <h1 className="font-semibold font-serif sm:text-2xl text-sm text-center">
+                        Lebih dari Sekadar Alas Kaki
                     </h1>
-                    <p className="mt-3">
-                        <b>Frontend 🚀</b>
-                    </p>
-                    <ul className="leading-9">
-                        <li>ReactJS</li>
-                        <li>React Native</li>
-                        <li>VueJS</li>
-                        <li>Tailwind</li>
-                    </ul>
-                    <p className="mt-3">
-                        <b>Backend 🔬</b>
-                    </p>
-                    <ul className="leading-9">
-                        <li>NodeJS</li>
-                        <li>tRPC</li>
-                        <li>NestJS</li>
-                        <li>PostgreSQL</li>
-                    </ul>
-                    <p className="animate-bounce  mt-6">↓</p>
+
+                    <p className="animate-bounce text-center mt-6">↓</p>
                 </Section>
                 <Section>
-                    <h1 className="font-semibold font-serif text-2xl">
-                        🤙 Call me maybe?
+                    <h1 className="font-semibold font-serif sm:text-2xl text-sm text-center">
+                        🤙 Tunggu apa lagi? Belilah di <br />
+
                     </h1>
-                    <p className="mt-6 p-3 bg-primary rounded-lg">
-                        📞 <a href="tel:(+42) 4242-4242-424242">(+42) 4242-4242-424242</a>
+                    <p className="mt-6 p-3 bg-primary rounded-lg text-center">
+                        <a className='font-semibold font-serif sm:text-2xl text-sm text-center'>REShop</a>
                     </p>
                 </Section>
             </div>

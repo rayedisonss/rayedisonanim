@@ -33,7 +33,7 @@ export const Sidebar = () => {
 
 
                     <div className="divider"></div>
-                    <h2 className='text-center py-2 text-bold'>Olahraga</h2>
+
                     <CategoryCheck />
 
                 </ul>

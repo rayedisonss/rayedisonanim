@@ -1,7 +1,10 @@
 import { Chat, Heart, Share } from '@phosphor-icons/react';
 import React, { useState } from 'react'
+import { useNavigate } from 'react-router-dom';
 
 export const CardPrice = () => {
+
+    const navigate = useNavigate();
 
     const [counter, setCounter] = useState(0);
 
@@ -40,8 +43,8 @@ export const CardPrice = () => {
                 </div>
 
                 <div className="card-actions justify-center">
-                    <button className="btn btn-primary w-full">+ Keranjang </button>
-                    <button className="btn btn-secondary w-full">Beli</button>
+                    <button className="btn btn-primary w-full" onClick={() => navigate('/cart')}>+ Keranjang </button>
+                    <button className="btn btn-secondary w-full" onClick={() => navigate('/cart')}>Beli</button>
                 </div>
 
 
