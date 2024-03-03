@@ -33,7 +33,7 @@ export const Overlay = () => {
                 </Section>
                 <Section right >
                     <h1 className="font-semibold font-serif sm:text-2xl text-sm text-center">
-                        Sepatu tangguh untuk menemanimu di berbagai medan?
+                        Sepatu yang tangguh di berbagai medan?
                     </h1>
 
                     <p className="animate-bounce text-center mt-6">↓</p>
