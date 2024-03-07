@@ -15,25 +15,63 @@ export const NB_FLOORS = 3;
 export function ThreeShoes(props) {
 
 
+  // useRef digunakan untuk membuat referensi ke elemen DOM atau nilai tertentu di dalam komponen.
+  // Nilai tersebut disimpan dalam properti current dari objek referensi.
+
+
+
+  // Nilai yang disimpan dalam useRef tidak terpengaruh oleh re - render komponen.
+  // Ini berarti nilai tersebut tetap ada di antara render, berbeda dengan state yang diperbarui saat komponen di - render ulang.
+
+  // kayak 'document.getElementById('ref')'
+
   const ref = useRef();
+
+  // TimeLine
   const tl = useRef();
 
-  const libraryRef = useRef();
-  const atticRef = useRef();
+
+  const sepatuDua = useRef();
+  const sepatuTiga = useRef();
 
 
   const scroll = useScroll();
 
+  // Agar sesuai dengan yang kita scroll
   useFrame(() => {
     tl.current.seek(scroll.offset * tl.current.duration());
   })
 
 
-
+  // Akan berjalan sebelum elemen elemen di web terprint atau muncul
+  // bersifat synchronous
+  // jadi ini yang akan dijalankan duluan
   useLayoutEffect(() => {
     tl.current = gsap.timeline();
 
+
+    // Catatan TIMELINE
+    // Contoh :
+    // tl.to("#id", { x: 100, duration: 1 }); 
+
+    // parameter pertama di isi ID atau Selector nya, apa yang mau di animasikan,
+    // Parameter kedua di isi Animasi nya mau apa? atau perubahan apa yang mau di buat
+    // Parameter kedua ini harus Object
+
+
+
+
+    // from() itu untuk menentukan keadaan awalnya
+
+
+
+
+
+
+
     // VERTICAL ANIMATION
+    // Group object nya turun
+    // Turun atau naiknya itu datar
     tl.current.to(
       ref.current.position,
       {
@@ -42,8 +80,6 @@ export function ThreeShoes(props) {
       },
       0
     );
-
-
     tl.current.to(
       ref.current.rotation,
       { duration: 1, x: 0, y: Math.PI / 6, z: 0 },
@@ -55,7 +91,7 @@ export function ThreeShoes(props) {
       1
     );
 
-    // Office movement
+    // ThreeShoes Rotation dikit dikit
     tl.current.to(
       ref.current.position,
       {
@@ -75,9 +111,9 @@ export function ThreeShoes(props) {
       1
     );
 
-    // LIBRARY FLOOR
+    // Animasi sepatuDua
     tl.current.from(
-      libraryRef.current.position,
+      sepatuDua.current.position,
       {
         duration: 0.5,
         x: -2,
@@ -85,7 +121,7 @@ export function ThreeShoes(props) {
       0.5
     );
     tl.current.from(
-      libraryRef.current.rotation,
+      sepatuDua.current.rotation,
       {
         duration: 0.5,
         y: -Math.PI / 2,
@@ -93,18 +129,18 @@ export function ThreeShoes(props) {
       0
     );
 
-    // ATTIC
+    // Animasi SepatuTiga 
     tl.current.from(
-      atticRef.current.position,
+      sepatuTiga.current.position,
       {
         duration: 1.5,
-        y: 2,
+        y: 5,
       },
       0
     );
 
     tl.current.from(
-      atticRef.current.rotation,
+      sepatuTiga.current.rotation,
       {
         duration: 0.5,
         y: Math.PI / 2,
@@ -112,8 +148,11 @@ export function ThreeShoes(props) {
       1
     );
 
+
+
+    // Ini kalo diganti ke To, trus z nya di ganti jadi -6 bakal jadi sebalik nya
     tl.current.from(
-      atticRef.current.position,
+      sepatuTiga.current.position,
       {
         duration: 0.5,
 
@@ -121,6 +160,15 @@ export function ThreeShoes(props) {
       },
       1.5
     );
+
+
+    // Kalau from, kita atur dulu awalnya, setelah sampai akhir dia akan kembali ke nilai awal
+    // Dari sono ke sini
+
+
+    // Kalau To, kita atur nilai nya, nanti dia akan pindah ke nilai yang sudah kita inputkan
+    // Dari sini ke sono
+
   }, []);
 
 
@@ -140,7 +188,7 @@ export function ThreeShoes(props) {
       </group>
 
       <group position={[0, 2.114, -2.23]} >
-        <group ref={libraryRef}>
+        <group ref={sepatuDua}>
 
           <mesh geometry={nodes.Object2.geometry} material={materials['Material.041']} />
           <mesh geometry={nodes.Object2_1.geometry} material={materials['Material.036']} />
@@ -152,7 +200,7 @@ export function ThreeShoes(props) {
         </group>
       </group>
       <group position={[-3, 4.227, -2.2]} rotation={[0, 0.45, 0]}>
-        <group ref={atticRef}>
+        <group ref={sepatuTiga}>
 
           <mesh geometry={nodes.Object3.geometry} material={materials['Material.027']} />
           <mesh geometry={nodes.Object3_1.geometry} material={materials['Material.028']} />
