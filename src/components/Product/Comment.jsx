@@ -33,7 +33,7 @@ export const Comment = () => {
                         <div className=" flex items-center gap-2">
                             <div className="chat-image avatar">
                                 <div className="w-10 rounded-full">
-                                    <img alt="foto" src="https://daisyui.com/images/stock/photo-1534528741775-53994a69daeb.jpg" />
+                                    <img alt="foto" src="/image/ProfilePict.jpeg" />
                                 </div>
                             </div>
 

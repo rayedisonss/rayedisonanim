@@ -8,6 +8,7 @@ import { Footer } from '../components/Footer'
 import { Navbar } from '../components/Navbar'
 import { CarouselNews } from '../components/Carousel/CarouselNews'
 import { useNavigate } from 'react-router-dom'
+import { GridVert } from '../components/GridVert'
 
 export const Home = () => {
     const navigate = useNavigate()
@@ -23,6 +24,10 @@ export const Home = () => {
 
             <Header title={"Trending"} />
             <CardGroup />
+
+
+            <Header title={"Gallery"} />
+            <GridVert />
 
             <Header title={"Some Product"} />
             <CarouselProduct />
